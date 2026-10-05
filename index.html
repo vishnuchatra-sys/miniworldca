@@ -627,7 +627,171 @@ footer{
   .nav-ctas .btn-white-outline{display:none;}
   .advisor-box{padding:36px 24px;}
 }
+
+/* ADVISOR APPLICATION FORM */
+.advisor-application {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 48px;
+  border: 1px solid rgba(216, 177, 75, 0.35);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.advisor-application h3 {
+  font-size: 32px;
+  margin: 0 0 12px;
+  color: #fff;
+}
+
+.advisor-application > p {
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+#advisor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#advisor-form label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-size: 15px;
+  color: #fff;
+}
+
+#advisor-form input,
+#advisor-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid rgba(216, 177, 75, 0.45);
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#advisor-form input {
+  min-height: 50px;
+}
+
+#advisor-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+#advisor-form input:focus,
+#advisor-form textarea:focus {
+  outline: 2px solid #d8b14b;
+  border-color: #d8b14b;
+}
+
+#advisor-form button {
+  align-self: flex-start;
+  margin-top: 24px;
+  min-width: 260px;
+}
+
+#advisor-form-message {
+  margin-top: 15px;
+  min-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .advisor-application {
+    padding: 28px 20px;
+    margin-top: 40px;
+  }
+
+  .advisor-application h3 {
+    font-size: 26px;
+  }
+
+  #advisor-form button {
+    width: 100%;
+  }
+}
+
+/* PARTNER APPLICATION FORM */
+
+.partner-application {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 40px;
+  border: 1px solid rgba(216, 177, 75, 0.35);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+#partner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#partner-form label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+#partner-form input,
+#partner-form select,
+#partner-form textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid rgba(216, 177, 75, 0.45);
+  background: #fff;
+  color: #111;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#partner-form input,
+#partner-form select {
+  min-height: 50px;
+}
+
+#partner-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#partner-form input:focus,
+#partner-form select:focus,
+#partner-form textarea:focus {
+  outline: 2px solid #d8b14b;
+  border-color: #d8b14b;
+}
+
+#partner-form button {
+  align-self: flex-start;
+  margin-top: 24px;
+  min-width: 280px;
+}
+
+#partner-form-message {
+  margin-top: 15px;
+  min-height: 24px;
+}
+
+@media (max-width: 768px) {
+  .partner-application {
+    padding: 28px 20px;
+    margin-top: 30px;
+  }
+
+  #partner-form button {
+    width: 100%;
+  }
+}
+
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
 
@@ -873,8 +1037,7 @@ footer{
           <li>Early access to all campus announcements</li>
           <li>Access to all 10 consortium communities</li>
         </ul>
-        <a href="mailto:vishnuchatra@miniworldca.com?subject=Join the Movement — World Citizen Registration" class="btn btn-gold btn-lg">Join Free Now</a>
-      </div>
+      <a href="#movement-registration" class="btn btn-gold btn-lg">Join Free Now</a>      </div>
       <div class="jc">
         <div class="jc-icon">🎓</div>
         <h3>Join as an Advisor</h3>
@@ -886,8 +1049,7 @@ footer{
           <li>Consortium strategy leadership sessions</li>
           <li>First right of pavilion naming opportunities</li>
         </ul>
-        <a href="mailto:vishnuchatra@miniworldca.com?subject=Advisory Board Application — Project Mini World" class="btn btn-gold btn-lg">Apply as Advisor</a>
-      </div>
+        <a href="#advisor-application" class="btn btn-gold btn-lg">Apply as Advisor</a>      </div>
       <div class="jc">
         <div class="jc-icon">🤝</div>
         <h3>Partner With Us</h3>
@@ -899,12 +1061,144 @@ footer{
           <li>Media &amp; broadcast partnerships</li>
           <li>Research &amp; innovation collaboration</li>
         </ul>
-        <a href="mailto:vishnuchatra@miniworldca.com?subject=Partnership Inquiry — Project Mini World" class="btn btn-navy-outline btn-lg">Become a Partner</a>
+        <a href="#partner-application" class="btn btn-navy-outline btn-lg">Become a Partner</a>        
       </div>
     </div>
   </div>
 </section>
 
+<!-- PARTNER APPLICATION -->
+<section id="partner-application" class="section s-navy">
+  <div class="si">
+
+    <div class="section-head reveal">
+      <span class="eyebrow">Partner With Mini World</span>
+      <h2 class="stitle">Become a Partner</h2>
+      <p>
+        Organizations, corporations, foundations, governments, and cultural
+        institutions are invited to explore partnership opportunities with
+        Project Mini World.
+      </p>
+    </div>
+
+    <div class="partner-application reveal">
+      <form id="partner-form">
+
+        <label for="partner-first-name">First Name *</label>
+        <input type="text" id="partner-first-name" required>
+
+        <label for="partner-last-name">Last Name *</label>
+        <input type="text" id="partner-last-name" required>
+
+        <label for="partner-email">Email Address *</label>
+        <input type="email" id="partner-email" required>
+
+        <label for="partner-phone">Phone Number</label>
+        <input type="tel" id="partner-phone">
+
+        <label for="partner-organization">Organization / Company *</label>
+        <input type="text" id="partner-organization" required>
+
+        <label for="partner-title">Title / Role</label>
+        <input type="text" id="partner-title">
+
+        <label for="partner-organization-type">Organization Type *</label>
+        <select id="partner-organization-type" required>
+          <option value="">Select organization type</option>
+          <option value="Corporation">Corporation</option>
+          <option value="Foundation / Nonprofit">Foundation / Nonprofit</option>
+          <option value="Government">Government</option>
+          <option value="Educational Institution">Educational Institution</option>
+          <option value="Cultural Organization">Cultural Organization</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="partner-interest">Partnership Interest *</label>
+        <select id="partner-interest" required>
+          <option value="">Select partnership interest</option>
+          <option value="Pavilion Partnership">Pavilion Partnership</option>
+          <option value="Corporate / Strategic Partnership">Corporate / Strategic Partnership</option>
+          <option value="Sponsorship / Funding">Sponsorship / Funding</option>
+          <option value="Government / Institutional Partnership">Government / Institutional Partnership</option>
+          <option value="Cultural Partnership">Cultural Partnership</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="partner-about">
+          Tell Us About Your Organization and Partnership Interest *
+        </label>
+        <textarea id="partner-about" rows="6" required></textarea>
+
+        <button type="submit" class="btn btn-gold btn-xl">
+          Submit Partnership Inquiry
+        </button>
+
+        <p id="partner-form-message"></p>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- JOIN THE MOVEMENT REGISTRATION -->
+<section id="movement-registration" class="section s-navy">
+  <div class="si">
+    <div class="section-head reveal">
+      <span class="eyebrow">Join the Movement</span>
+      <h2 class="stitle">Become a World Citizen</h2>
+      <p>
+        Join the global community supporting Project Mini World and the
+        vision of One World Social Action for Global Awareness.
+      </p>
+    </div>
+
+    <div class="reveal" style="max-width: 650px; margin: 40px auto;">
+      <form id="movement-form">
+
+        <div style="margin-bottom: 20px;">
+          <label for="movement-first-name">First Name</label>
+          <input
+            type="text"
+            id="movement-first-name"
+            name="first_name"
+            required
+            style="width:100%; padding:14px; margin-top:8px;"
+          >
+        </div>
+
+        <div style="margin-bottom: 20px;">
+          <label for="movement-last-name">Last Name</label>
+          <input
+            type="text"
+            id="movement-last-name"
+            name="last_name"
+            required
+            style="width:100%; padding:14px; margin-top:8px;"
+          >
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <label for="movement-email">Email Address</label>
+          <input
+            type="email"
+            id="movement-email"
+            name="email"
+            required
+            style="width:100%; padding:14px; margin-top:8px;"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-lg">
+          Join the Movement
+        </button>
+
+        <p id="movement-message" style="margin-top:20px;"></p>
+
+      </form>
+    </div>
+  </div>
+</section>
 <!-- ADVISOR -->
 <section id="advisor" class="section s-navy2">
   <div class="si">
@@ -932,9 +1226,45 @@ footer{
         <span class="atag">Technology Leaders</span>
         <span class="atag">Medical Experts</span>
       </div>
-      <a href="mailto:vishnuchatra@miniworldca.com?subject=Advisory Board Application — Project Mini World" class="btn btn-gold btn-xl">Apply to the Advisory Board</a>
-    </div>
-  </div>
+      <a href="#advisor-application" class="btn btn-gold btn-xl">Apply to the Advisory Board</a>
+      </div>
+
+      <div id="advisor-application" class="advisor-application">
+
+  <h3>Apply to Join the Global Advisory Board</h3>
+  <p>Tell us about yourself and how you would like to contribute to the vision of Project Mini World.</p>
+
+  <form id="advisor-form">
+
+    <label for="advisor-first-name">First Name *</label>
+    <input type="text" id="advisor-first-name" required>
+
+    <label for="advisor-last-name">Last Name *</label>
+    <input type="text" id="advisor-last-name" required>
+
+    <label for="advisor-email">Email Address *</label>
+    <input type="email" id="advisor-email" required>
+
+    <label for="advisor-phone">Phone Number</label>
+    <input type="tel" id="advisor-phone">
+
+    <label for="advisor-professional-area">Professional Area *</label>
+    <input type="text" id="advisor-professional-area" placeholder="e.g. Business, Government, Science, Arts" required>
+
+    <label for="advisor-about">Tell Us About Yourself *</label>
+    <textarea id="advisor-about" rows="5" required></textarea>
+
+    <label for="advisor-why">Why would you like to become a Mini World Advisor? *</label>
+    <textarea id="advisor-why" rows="5" required></textarea>
+
+    <button type="submit" class="btn btn-gold btn-xl">
+      Submit Application
+    </button>
+
+    <p id="advisor-form-message"></p>
+
+  </form>
+</div>
 </section>
 
 <!-- DONATE -->
@@ -1049,5 +1379,224 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+
+<script>
+  const SUPABASE_URL = 'https://zrlfntneregcyxkpfnpy.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_6FwVkR_ZIPfLyzZZaL373A_aGIVOXbX';
+
+  const miniWorldSupabase = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+  );
+
+  const movementForm = document.getElementById('movement-form');
+const movementMessage = document.getElementById('movement-message');
+
+movementForm.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const firstName = document
+    .getElementById('movement-first-name')
+    .value.trim();
+
+  const lastName = document
+    .getElementById('movement-last-name')
+    .value.trim();
+
+  const email = document
+    .getElementById('movement-email')
+    .value.trim()
+    .toLowerCase();
+
+  movementMessage.textContent = 'Submitting...';
+
+  const { error } = await miniWorldSupabase
+    .from('movement_members')
+    .insert([
+      {
+        first_name: firstName,
+        last_name: lastName,
+        email: email
+      }
+    ]);
+
+  if (error) {
+    console.error('Supabase registration error:', error);
+
+    if (error.code === '23505') {
+      movementMessage.textContent =
+        'This email address has already joined the movement.';
+    } else {
+      movementMessage.textContent =
+        'We could not complete your registration. Please try again.';
+    }
+
+    return;
+  }
+
+  movementMessage.textContent =
+    'Thank you for joining the Mini World movement!';
+
+  movementForm.reset();
+});
+// ===== ADVISOR APPLICATION =====
+
+const advisorForm = document.getElementById('advisor-form');
+const advisorMessage = document.getElementById('advisor-form-message');
+
+advisorForm.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const firstName = document
+    .getElementById('advisor-first-name')
+    .value.trim();
+
+  const lastName = document
+    .getElementById('advisor-last-name')
+    .value.trim();
+
+  const email = document
+    .getElementById('advisor-email')
+    .value.trim()
+    .toLowerCase();
+
+  const phone = document
+    .getElementById('advisor-phone')
+    .value.trim();
+
+  const professionalArea = document
+    .getElementById('advisor-professional-area')
+    .value.trim();
+
+  const aboutYourself = document
+    .getElementById('advisor-about')
+    .value.trim();
+
+  const whyAdvisor = document
+    .getElementById('advisor-why')
+    .value.trim();
+
+  advisorMessage.textContent = 'Submitting your application...';
+
+  const { error } = await miniWorldSupabase
+    .from('advisor_applications')
+    .insert([
+      {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone || null,
+        professional_area: professionalArea,
+        about_yourself: aboutYourself,
+        why_advisor: whyAdvisor
+      }
+    ]);
+
+  if (error) {
+    console.error('Advisor application error:', error);
+
+    if (error.code === '23505') {
+      advisorMessage.textContent =
+        'An application with this email address has already been submitted.';
+    } else {
+      advisorMessage.textContent =
+        'We could not submit your application. Please try again.';
+    }
+
+    return;
+  }
+
+  advisorMessage.textContent =
+    'Thank you. Your application to the Mini World Global Advisory Board has been submitted successfully.';
+
+  advisorForm.reset();
+});
+
+// ===== PARTNER APPLICATION =====
+
+const partnerForm = document.getElementById('partner-form');
+const partnerMessage = document.getElementById('partner-form-message');
+
+partnerForm.addEventListener('submit', async function (event) {
+  event.preventDefault();
+
+  const firstName = document
+    .getElementById('partner-first-name')
+    .value.trim();
+
+  const lastName = document
+    .getElementById('partner-last-name')
+    .value.trim();
+
+  const email = document
+    .getElementById('partner-email')
+    .value.trim()
+    .toLowerCase();
+
+  const phone = document
+    .getElementById('partner-phone')
+    .value.trim();
+
+  const organizationName = document
+    .getElementById('partner-organization')
+    .value.trim();
+
+  const titleRole = document
+    .getElementById('partner-title')
+    .value.trim();
+
+  const organizationType = document
+    .getElementById('partner-organization-type')
+    .value;
+
+  const partnershipInterest = document
+    .getElementById('partner-interest')
+    .value;
+
+  const aboutOrganization = document
+    .getElementById('partner-about')
+    .value.trim();
+
+  partnerMessage.textContent =
+    'Submitting your partnership inquiry...';
+
+  const { error } = await miniWorldSupabase
+    .from('partner_applications')
+    .insert([
+      {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone || null,
+        organization_name: organizationName,
+        title_role: titleRole || null,
+        organization_type: organizationType,
+        partnership_interest: partnershipInterest,
+        about_organization: aboutOrganization
+      }
+    ]);
+
+  if (error) {
+    console.error('Partner application error:', error);
+
+    if (error.code === '23505') {
+      partnerMessage.textContent =
+        'A partnership inquiry with this email address has already been submitted.';
+    } else {
+      partnerMessage.textContent =
+        'We could not submit your partnership inquiry. Please try again.';
+    }
+
+    return;
+  }
+
+  partnerMessage.textContent =
+    'Thank you. Your partnership inquiry has been submitted successfully.';
+
+  partnerForm.reset();
+});
+
+</script>
+
 </body>
 </html>
